@@ -1,24 +1,17 @@
+require "pry"
 class Owner
-  attr_accessor :pets
-  attr_reader
+  attr_accessor :pets, :name
+  attr_reader :species
   attr_writer
-@@all
-  def initialize
+@@all = []
+  def initialize(name)
+    @name = name
     @pets = {
       fishes: [],
       cats: [],
       dogs: []
     }
     @@all << self
-  end
-
-  def species
-  end
-  def say_species
-  end
-  def name
-  end
-  def pets
   end
 
   def buy_fish(name)
@@ -42,4 +35,7 @@ class Owner
     @@all.clear
   end
 
+  def say_species
+    "I am a #{species}."
+  end
 end

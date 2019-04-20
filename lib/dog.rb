@@ -1,11 +1,10 @@
 class Dog
   # code goes here
-  attr_accessor :name 
-  
-  @@all = []
+  attr_accessor :mood 
+  attr_reader :name
   
   def initialize (name)
-  @name = name.freeze
-  @@all << self 
-  #@mood = "nervous"
+  @name = name
+  @mood = "nervous"
+  end 
 end
